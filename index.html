@@ -20,6 +20,7 @@
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       position: relative;
       overflow: hidden;
+      z-index: 1;
     }
     .header::before {
       content: "";
@@ -40,14 +41,28 @@
       margin-top: -60px;
       object-fit: cover;
       background: #ccc;
+      position: relative;
+      z-index: 10;
+    }
+    .name-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0 10px 0;
     }
     .name {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: bold;
       display: flex;
       align-items: center;
       gap: 10px;
-      margin: 20px 0;
+      color: #222;
+    }
+    .nickname {
+      font-size: 14px;
+      color: #666;
+      margin-top: 4px;
+      font-style: italic;
     }
     .verified {
       width: 20px;
@@ -56,7 +71,7 @@
     .links {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 16px;
       width: 90%;
       max-width: 320px;
       padding-bottom: 40px;
@@ -65,20 +80,22 @@
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 12px;
+      gap: 14px;
+      padding: 16px;
       background: #ffffff;
       color: #333;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
       transition: background 0.3s;
+      font-size: 18px;
+      font-weight: 500;
     }
     .links a:hover {
       background: #eee;
     }
     .links img {
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 28px;
       object-fit: contain;
     }
   </style>
@@ -89,9 +106,12 @@
 
   <img src="https://i.ibb.co/GSH2mn9/IMG-20250423-073435-816.jpg" alt="Avatar" class="avatar" />
 
-  <div class="name">
-    aramice
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified" class="verified" />
+  <div class="name-container">
+    <div class="name">
+      Aram Khondkaryan
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="verified" class="verified" />
+    </div>
+    <div class="nickname">@aramice</div>
   </div>
 
   <div class="links">
